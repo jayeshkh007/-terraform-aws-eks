@@ -313,6 +313,12 @@ variable "attach_worker_cni_policy" {
   default     = true
 }
 
+variable "attach_worker_cloudwatch_policy" {
+  description = "Whether to attach the Amazon managed `CloudWatchFullAccess` IAM policy to the default worker IAM role. WARNING: If set `false` the permissions must be assigned to the `aws-node` DaemonSet pods via another method or nodes will not be able to join the cluster."
+  type        = bool
+  default     = true
+}
+
 variable "create_eks" {
   description = "Controls if EKS resources should be created (it affects almost all resources)"
   type        = bool
