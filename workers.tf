@@ -294,7 +294,7 @@ resource "aws_launch_configuration" "workers" {
     aws_iam_role_policy_attachment.workers_AmazonEKSWorkerNodePolicy,
     aws_iam_role_policy_attachment.workers_AmazonEKS_CNI_Policy,
     aws_iam_role_policy_attachment.workers_AmazonEC2ContainerRegistryReadOnly,
-	aws_iam_role_policy_attachment.workers_CloudWatchFullAccess
+	aws_iam_role_policy_attachment.workers_CloudWatchFullAccess,
     aws_iam_role_policy_attachment.workers_additional_policies
   ]
 }
