@@ -450,7 +450,7 @@ resource "aws_iam_role_policy_attachment" "workers_AmazonEC2ContainerRegistryRea
   role       = aws_iam_role.workers[0].name
 }
 resource "aws_iam_role_policy_attachment" "workers_CloudWatchFullAccess" {
-  count      = var.manage_worker_iam_resources && var.create_eks ? 1 : 0
+  count      = var.manage_worker_iam_resources && var.attach_worker_cloudwatch_policy && var.create_eks ? 1 : 0
   policy_arn = "${local.policy_arn_prefix}/CloudWatchFullAccess"
   role       = aws_iam_role.workers[0].name
 }
