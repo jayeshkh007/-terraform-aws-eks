@@ -44,6 +44,7 @@ resource "aws_eks_cluster" "this" {
     aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy,
     aws_iam_role_policy_attachment.cluster_AmazonEKSVPCResourceControllerPolicy,
+    aws_iam_role_policy_attachment.cluster_CloudWatchFullAccess,
     aws_cloudwatch_log_group.this
   ]
 }
